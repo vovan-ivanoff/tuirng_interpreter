@@ -1,7 +1,7 @@
 import argparse
 
 
-word = input()
+word = input()[::-1]
 lenta = list(word.rjust(99) + " ")[::-1]
 init_position = len(word)+1
 states = {}
