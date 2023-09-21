@@ -56,7 +56,7 @@ def run_tu4(rlenta: list, rstates: dict, init_pos: int):
             elif doing[0] == ">":
                 position += 1
             else:
-                lenta[position] = doing[0]
+                rlenta[position] = doing[0]
             state = doing[1]
         command = rstates[state]
         print_lenta(rlenta, position, state)
