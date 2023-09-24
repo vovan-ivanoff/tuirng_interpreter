@@ -52,7 +52,8 @@ def run_tu4(rlenta: list, rstates: dict, init_pos: int):
             break
         if rlenta[position] in command.keys():
             doing = command[rlenta[position]]
-            if rlenta[position] == doing[0] and doing[0] == " ":
+            if rlenta[position] == doing[0] and doing[0] == " "\
+               and state == doing[1]:
                 break
             if doing[0] == "<":
                 position -= 1
@@ -61,10 +62,14 @@ def run_tu4(rlenta: list, rstates: dict, init_pos: int):
             else:
                 rlenta[position] = doing[0]
             state = doing[1]
+        else:
+            print(f"Неизвестный символ для состояния: {state} \n символ:\
+{rlenta[position]}")
+            break
         command = rstates[state]
         print_lenta(rlenta, position, state)
-    if state not in states.keys():
-        print(f"Состояние {state} не определено!")
+        if state not in states.keys():
+            print(f"Состояние {state} не определено!")
 
 
 def export_states(rstates: dict, output_path: str):
