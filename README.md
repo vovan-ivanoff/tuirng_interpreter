@@ -1,11 +1,14 @@
 # Turing in fours interpreter
-This is four argumented turing machine ***(AKA Zaycev machine)*** interpreter written in python
+This is four argumented turing machine ~~(AKA Zaycev machine)~~ interpreter written in python
+
 it supports comments, line breaks
 # SYNTAX
-first state is 00,
-move to the right `>`
-move to the left `<`
-`<state>,<what head sees>,<what it shoud do>,<in what state it would go>`
+- first state is 00,
+- move to the right `>`
+- move to the left `<`
+- `<state>,<what head sees>,<what it shoud do>,<in what state it would go>`
+
+example file with examle syntax named test.tu4
 # HOW-TO
 usge: `python main.py <path to tu4>`
 
